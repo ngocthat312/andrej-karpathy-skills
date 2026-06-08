@@ -63,3 +63,15 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
+## Project-Specific Guidelines
+- Also follow project-specific guidelines by reading the project's README.md, AGENTS.md,..
+- Read in the folder "/sop" to explain the business context of the EMM platform across ingestion, metadata, authoring, review, the tickets and publishing workflows. It is designed for onboarding, product alignment, and delivery planning before implementation details.
+- For EMM, prioritize stability and maintainability over speed. Avoid speculative features or optimizations. Focus on clear, simple code that meets the requirements without overengineering.
+- For EMM, when making changes, only modify the files and lines necessary to implement the requested feature or fix.
+Don't refactor unrelated code or change formatting unless it directly supports the task. This minimizes risk and keeps diffs focused.
+- Use Info Log. We should always be aware of requests coming into and going out of the system.
+- Use Error Log. We should log all errors in the system, including validation errors, exceptions, and failed operations.
+This will help us identify and troubleshoot issues quickly.
+- For EMM, when implementing new features, write tests that cover the expected behavior and edge cases. This ensures that the feature works as intended and helps prevent regressions in the future.
+- For EMM, when fixing bugs, first write a test that reproduces the issue. Then implement the fix and verify that the test passes. This ensures that the bug is properly addressed and prevents it from recurring.
+- For EMM, when refactoring code, ensure that all existing tests pass before and after the changes. This confirms that the refactor did not introduce any regressions and maintains the integrity of the codebase.
